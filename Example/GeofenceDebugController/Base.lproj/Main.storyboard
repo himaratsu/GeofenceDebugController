@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,41 +15,95 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWL-iI-JvK">
-                                <rect key="frame" x="92" y="265" width="137" height="38"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ToG-Vf-945">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new geofence" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fr-dp-sY6">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="lj5-Ff-HX7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GeofenceDebugController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvP-Ux-cbC">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="p0j-uT-meg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWL-iI-JvK">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="137" id="NJW-3j-sqb"/>
+                                            <constraint firstAttribute="height" constant="38" id="ZJu-fD-d7T"/>
+                                        </constraints>
+                                        <state key="normal" title="Show Debug"/>
+                                        <connections>
+                                            <action selector="debugButtonTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nct-Cs-gwR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3U-7f-ulO">
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="M5r-BI-LYR"/>
+                                        </constraints>
+                                        <state key="normal" title="Tokyo Tower"/>
+                                        <connections>
+                                            <action selector="tokyoTowerButtonTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VxY-CL-fsV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJE-vp-PPM">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="iXX-dY-7Mi"/>
+                                        </constraints>
+                                        <state key="normal" title="Roppongi Hills"/>
+                                        <connections>
+                                            <action selector="roppongiHillsTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="khY-wE-nbV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdY-vF-Yi1">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="m0v-c5-1V7"/>
+                                        </constraints>
+                                        <state key="normal" title="Asakusa"/>
+                                        <connections>
+                                            <action selector="asakusaButtonTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6DD-qZ-R5e"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="137" id="NJW-3j-sqb"/>
-                                    <constraint firstAttribute="height" constant="38" id="ZJu-fD-d7T"/>
+                                    <constraint firstAttribute="height" constant="380" id="F9h-AN-QfZ"/>
+                                    <constraint firstItem="lWL-iI-JvK" firstAttribute="centerX" secondItem="ToG-Vf-945" secondAttribute="centerX" id="HKh-To-YMP"/>
+                                    <constraint firstAttribute="trailing" secondItem="IJE-vp-PPM" secondAttribute="trailing" constant="40" id="IR8-VD-cp8"/>
+                                    <constraint firstItem="lWL-iI-JvK" firstAttribute="top" secondItem="bvP-Ux-cbC" secondAttribute="bottom" constant="16" id="MOt-Hk-uqJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="M3U-7f-ulO" secondAttribute="trailing" constant="40" id="POg-uv-7jI"/>
+                                    <constraint firstItem="bvP-Ux-cbC" firstAttribute="top" secondItem="KdY-vF-Yi1" secondAttribute="bottom" constant="101" id="PgV-Ts-wFV"/>
+                                    <constraint firstItem="M3U-7f-ulO" firstAttribute="leading" secondItem="ToG-Vf-945" secondAttribute="leading" constant="40" id="SfR-DR-LTF"/>
+                                    <constraint firstAttribute="trailing" secondItem="KdY-vF-Yi1" secondAttribute="trailing" constant="40" id="YXl-fx-kfJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="bvP-Ux-cbC" secondAttribute="trailing" constant="20" id="YgR-nd-MDi"/>
+                                    <constraint firstItem="IJE-vp-PPM" firstAttribute="top" secondItem="M3U-7f-ulO" secondAttribute="bottom" id="Za7-t1-tBL"/>
+                                    <constraint firstItem="KdY-vF-Yi1" firstAttribute="top" secondItem="IJE-vp-PPM" secondAttribute="bottom" id="aJj-oM-gU1"/>
+                                    <constraint firstItem="KdY-vF-Yi1" firstAttribute="leading" secondItem="ToG-Vf-945" secondAttribute="leading" constant="40" id="d2x-fg-UXA"/>
+                                    <constraint firstItem="5fr-dp-sY6" firstAttribute="top" secondItem="ToG-Vf-945" secondAttribute="top" constant="20" id="eZW-3x-pZ5"/>
+                                    <constraint firstItem="5fr-dp-sY6" firstAttribute="leading" secondItem="ToG-Vf-945" secondAttribute="leading" constant="20" id="guX-or-YoY"/>
+                                    <constraint firstItem="bvP-Ux-cbC" firstAttribute="leading" secondItem="ToG-Vf-945" secondAttribute="leading" constant="20" id="lsh-lJ-BNU"/>
+                                    <constraint firstItem="M3U-7f-ulO" firstAttribute="top" secondItem="5fr-dp-sY6" secondAttribute="bottom" constant="13" id="web-4t-l9L"/>
+                                    <constraint firstAttribute="trailing" secondItem="5fr-dp-sY6" secondAttribute="trailing" constant="20" id="xdA-2I-Hkw"/>
+                                    <constraint firstItem="IJE-vp-PPM" firstAttribute="leading" secondItem="ToG-Vf-945" secondAttribute="leading" constant="40" id="zx0-ea-nPk"/>
                                 </constraints>
-                                <state key="normal" title="Show Debug"/>
-                                <connections>
-                                    <action selector="debugButtonTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nct-Cs-gwR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdY-vF-Yi1">
-                                <rect key="frame" x="80" y="183" width="161" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="161" id="bAx-BC-Urd"/>
-                                    <constraint firstAttribute="height" constant="37" id="m0v-c5-1V7"/>
-                                </constraints>
-                                <state key="normal" title="Add new geofence"/>
-                                <connections>
-                                    <action selector="addGeofenceButtonTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Kt6-Jh-9w2"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lWL-iI-JvK" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="W99-hB-lVd"/>
-                            <constraint firstItem="lWL-iI-JvK" firstAttribute="top" secondItem="KdY-vF-Yi1" secondAttribute="bottom" constant="45" id="ZJL-8F-pQG"/>
-                            <constraint firstItem="KdY-vF-Yi1" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="a2e-2a-wwD"/>
-                            <constraint firstItem="lWL-iI-JvK" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="vKs-Ca-opB"/>
+                            <constraint firstAttribute="trailing" secondItem="ToG-Vf-945" secondAttribute="trailing" id="9HN-wB-v42"/>
+                            <constraint firstItem="ToG-Vf-945" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="cUY-UA-yln"/>
+                            <constraint firstItem="ToG-Vf-945" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="wbu-Y4-dgE"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
