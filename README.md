@@ -1,6 +1,5 @@
 # GeofenceDebugController
 
-[![CI Status](http://img.shields.io/travis/Ryosuke Hiramatsu/GeofenceDebugController.svg?style=flat)](https://travis-ci.org/Ryosuke Hiramatsu/GeofenceDebugController)
 [![Version](https://img.shields.io/cocoapods/v/GeofenceDebugController.svg?style=flat)](http://cocoapods.org/pods/GeofenceDebugController)
 [![License](https://img.shields.io/cocoapods/l/GeofenceDebugController.svg?style=flat)](http://cocoapods.org/pods/GeofenceDebugController)
 [![Platform](https://img.shields.io/cocoapods/p/GeofenceDebugController.svg?style=flat)](http://cocoapods.org/pods/GeofenceDebugController)
@@ -22,7 +21,7 @@ pod "GeofenceDebugController"
 
 ## Author
 
-Ryosuke Hiramatsu, rhiramat@yahoo-corp.jp
+Ryosuke Hiramatsu, himaratsu@gmail.com
 
 ## License
 
