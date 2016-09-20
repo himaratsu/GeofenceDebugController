@@ -1,0 +1,14 @@
+PODS:
+  - GeofenceDebugController (0.1.0)
+
+DEPENDENCIES:
+  - GeofenceDebugController (from `../`)
+
+EXTERNAL SOURCES:
+  GeofenceDebugController:
+    :path: ../
+
+SPEC CHECKSUMS:
+  GeofenceDebugController: 59b09c0901962294def334ff0c39c75c99cbadeb
+
+COCOAPODS: 0.39.0

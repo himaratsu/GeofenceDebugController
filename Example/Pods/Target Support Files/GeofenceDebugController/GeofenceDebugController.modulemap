@@ -1,0 +1,6 @@
+framework module GeofenceDebugController {
+  umbrella header "GeofenceDebugController-umbrella.h"
+
+  export *
+  module * { export * }
+}

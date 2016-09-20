@@ -7,18 +7,39 @@
 //
 
 import UIKit
+import CoreLocation
+import GeofenceDebugController
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
+    private let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func requestAuthorization() {
+        
     }
-
+    
+    @IBAction private func addGeofenceButtonTouched(sender: AnyObject) {
+        // Tokyo Tower
+        let center = CLLocationCoordinate2DMake(35.681382, 139.766084)
+        let region = CLCircularRegion(center: center, radius: 200, identifier: "Tokyo Tower")
+        locationManager.startMonitoringForRegion(region)
+        
+        showAlert("New geofence added")
+    }
+    
+    @IBAction private func debugButtonTouched(sender: AnyObject) {
+        GeofenceDebugController.show(self)
+    }
+    
+    private func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        presentViewController(alertController, animated: true, completion: nil)
+    }
 }
-

@@ -19,11 +19,11 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/GeofenceDebugController"
+  s.homepage         = "https://github.com/himaratsu/GeofenceDebugController"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Ryosuke Hiramatsu" => "rhiramat@yahoo-corp.jp" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/GeofenceDebugController.git", :tag => s.version.to_s }
+  s.author           = { "Ryosuke Hiramatsu" => "himaratsu@gmail.com" }
+  s.source           = { :git => "https://github.com/rhiramat/GeofenceDebugController.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '8.0'
@@ -31,10 +31,10 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
-    'GeofenceDebugController' => ['Pod/Assets/*.png']
+    'GeofenceDebugController' => ['Pod/Assets/**/*'] 
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit', 'MapKit', 'CoreLocation'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
