@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = "https://github.com/himaratsu/GeofenceDebugController"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.screenshots      = "https://github.com/himaratsu/GeofenceDebugController/blob/master/screenshot/demo0.png?raw=true", "https://github.com/himaratsu/GeofenceDebugController/blob/master/screenshot/demo1.png?raw=true"
   s.license          = 'MIT'
   s.author           = { "Ryosuke Hiramatsu" => "himaratsu@gmail.com" }
   s.source           = { :git => "https://github.com/himaratsu/GeofenceDebugController.git", :tag => s.version.to_s }
