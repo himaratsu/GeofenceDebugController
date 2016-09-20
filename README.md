@@ -12,8 +12,9 @@ Geofences can be confirmed on the screen of a list or map.
 
 ## ScreenShot
 
-![](https://github.com/himaratsu/GeofenceDebugController/blob/master/screenshot/demo0.png?raw=true)
-![](https://github.com/himaratsu/GeofenceDebugController/blob/master/screenshot/demo1.png?raw=true)
+<img src="https://github.com/himaratsu/GeofenceDebugController/blob/master/screenshot/demo0.png?raw=true" width="480">
+
+<img src="https://github.com/himaratsu/GeofenceDebugController/blob/master/screenshot/demo1.png?raw=true" width="480">
 
 ## Usage
 
