@@ -4,11 +4,27 @@
 [![License](https://img.shields.io/cocoapods/l/GeofenceDebugController.svg?style=flat)](http://cocoapods.org/pods/GeofenceDebugController)
 [![Platform](https://img.shields.io/cocoapods/p/GeofenceDebugController.svg?style=flat)](http://cocoapods.org/pods/GeofenceDebugController)
 
+## What is GeofenceDebugController?
+
+GeofenceDebugController is debug tool for Geofence.
+You can check geofences set in your app quickly.
+Geofences can be confirmed on the screen of a list or map.
+
+## ScreenShot
+
+![](https://github.com/himaratsu/GeofenceDebugController/blob/master/screenshot/demo0.png?raw=true)
+![](https://github.com/himaratsu/GeofenceDebugController/blob/master/screenshot/demo1.png?raw=true)
+
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Please import `GeofenceDebugController`, and call `show(viewController: UIViewController)` method at any point.
 
-## Requirements
+```swift
+import GeofenceDebugController
+```
+```swift
+GeofenceDebugController.show(self)
+```
 
 ## Installation
 
@@ -18,6 +34,11 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "GeofenceDebugController"
 ```
+
+## Requirements
+
+* iOS 8.0 and later
+* Swift 2.3
 
 ## Author
 
