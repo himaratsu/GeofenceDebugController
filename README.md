@@ -18,7 +18,7 @@ Geofences can be confirmed on the screen of a list or map.
 
 ## Usage
 
-Please import `GeofenceDebugController`, and call `show(viewController: UIViewController)` method at any point.
+Please import `GeofenceDebugController`, and call `show(_:)` method at any point.
 
 ```swift
 import GeofenceDebugController
