@@ -102,7 +102,7 @@ class GeofenceDebugMapController: UIViewController, CLLocationManagerDelegate {
 
     @IBAction private func currentLocationButtonTouched(sender: AnyObject) {
         if let currentLocation = currentLocation {
-            setMapCenter(currentLocation, animated: true)
+            setMapCenter(currentLocation, animated: false)
         } else {
             showRequestLocationAlert()
         }

@@ -56,3 +56,13 @@ extension ViewController {
         GeofenceDebugController.show(self)
     }
 }
+
+extension ViewController {
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        GeofenceDebugController.show(self)
+    }
+}
