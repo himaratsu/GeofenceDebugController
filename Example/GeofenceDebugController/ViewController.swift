@@ -20,10 +20,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestAlwaysAuthorization()
     }
     
-    private func requestAuthorization() {
-        
-    }
-    
     private func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
@@ -55,7 +51,6 @@ extension ViewController {
         
         showAlert("New geofence added", message: "Asakusa")
     }
-    
     
     @IBAction private func debugButtonTouched(sender: AnyObject) {
         GeofenceDebugController.show(self)

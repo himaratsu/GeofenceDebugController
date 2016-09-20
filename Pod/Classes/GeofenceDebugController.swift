@@ -43,8 +43,17 @@ public class GeofenceDebugController: UITableViewController {
         refreshControl?.endRefreshing()
     }
     
-    // MARK: - Table view data source
+    public override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showMap" {
+            if let destVC = sender?.destinationViewController as? GeofenceDebugMapController {
+                destVC.firstCenterRegion = sender as? CLCircularRegion
+            }
+        }
+    }
+}
 
+// MARK: - UITableViewDataSource, UITableViewDelegate
+extension GeofenceDebugController {
     override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allRegions.count
     }
@@ -67,14 +76,6 @@ public class GeofenceDebugController: UITableViewController {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         performSegueWithIdentifier("showMap", sender: allRegions[indexPath.row])
     }
-    
-    public override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showMap" {
-            if let destVC = sender?.destinationViewController as? GeofenceDebugMapController {
-                destVC.firstCenterRegion = sender as? CLCircularRegion
-            }
-        }
-    }
 }
 
 extension GeofenceDebugController {
@@ -86,7 +87,5 @@ extension GeofenceDebugController {
                 rootViewController.presentViewController(geofenceDebugController, animated: true, completion: nil)
             }
         }
-        
-        
     }
 }
